@@ -1,0 +1,73 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div class="container" id="myrow">
+   <ul class="nav nav-pills">
+        <li class="nav-item">
+    <a class="nav-link " id="uploadimg" href="#upload-image">Upload Image</a>
+        </li>
+    </ul>
+
+<!-- tab panes -->
+<div class="tab-content">
+    <div class="tab-pane active" id="upload-image" role="tabpanel" aria-labelledby="uploadimg"> 
+        <div class ="row"> 
+             <div class="col">
+                <form action="#" method="POST" enctype="multipart/form-data">
+                     <p> 
+                      <input type="file" name="image_name" class="btn" style ="background-color:#2471A3;color: :azure;" required>
+                     </p>
+                     <p>
+                      <input type ="submit" value="submit"  style ="background-color:#2471A3;color: azure;" class="btn">
+                     </p>
+                     <p align-content="center">
+                       <strong>Instructions</strong>:<br>
+                       Only upload files with the extension ".jpg",".jpeg",".png".
+                       
+                     </p>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<br><br>
+{% if fileupload %}
+<div class="container" id ='myrow_result'>
+    <div class="row">
+        <div class="col col-8">
+            <p> Yippppy! that's the cartoon version of the image you uploaded </p>
+
+        </div>
+        <div class="col col-4">
+           <img src="static/cartoonized_img/{{image_filename}}" alt="cartoonized image" width="300" height="{{height}}">
+
+        </div>
+    </div>
+
+</div>
+
+
+{% endif %}
+{% if extension %}
+<div class="container" id="#myrow_result">
+    <div class="row">
+<p>Invaid extension of the image</p>. 
+<p>Make sure the image extension is of the following ".jpg",".jpeg",".png".</p>
+    </div>
+</div>
+{% endif %}
+<style>
+    #myrow{
+        background-color:#EBEDEF ;
+    }
+    #myrow_result{
+        background-color:#EBEDEF ;
+        padding: 5%;
+        align-content:center
+    }
+</style>
+{% endblock body %}

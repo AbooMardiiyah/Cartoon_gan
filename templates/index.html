@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic cartoonizer app</title>
+        <link rel="shortcut icon" type="image/png" href='./static/images/favicon.png'>
+        <link rel="stylesheet" href="./static/css/bootstrap.css">
+        <script>src='./static/js/bootstrap.js'</script>
+        <script>src='./static/js/bootstrap.bunde.js'</script>
+        <script>src='./static/js/jquery-3.6.0.js'</script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#2C3E50">
+            <a class="navbar-brand" href="#">Simple Image cartoonizer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                
+               
+              </div>
+            </div>
+          </nav>
+          <div class="container">
+        <br>
+        <br>
+            <h4>Welcome to CartooGAN with Flask. Turn your Pictures into cartoon</h4>
+          <!-- footer-->
+          <div class="container">
+              <hr>
+              <footer> Developed by Hamzat Tiamiyu</footer>
+          </div>
+            <br>
+          </div>
+        {% block body %}
+
+
+        {% endblock body %}
+    </body>
+</html>
